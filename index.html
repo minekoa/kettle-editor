@@ -5,6 +5,8 @@
     * {padding:0;margin:0;box-sizing:border-box;}
     html, body, #editor {width:100%;height:100%;}
   </style>
+  <script src="ksl-highlight-rules.js"></script>
+  <script src="mode-ksl.js"></script>
 <script>
   require("ace-min-noconflict");
   require('ace-min-noconflict/theme-twilight');
@@ -14,6 +16,7 @@
   window.addEventListener("DOMContentLoaded", () => {
       editor = ace.edit("editor");
       editor.setTheme("ace/theme/twilight");
+      editor.getSession().setMode("ace/mode/ksl");
       editor.setKeyboardHandler("ace/keyboard/emacs");
       editor.commands.bindKey("Ctrl-H", "backspace");
       editor.$blockScrolling = Infinity; // Warning 対策
