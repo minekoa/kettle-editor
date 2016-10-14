@@ -20,6 +20,7 @@
       editor.setKeyboardHandler("ace/keyboard/emacs");
       editor.commands.bindKey("Ctrl-H", "backspace");
       editor.$blockScrolling = Infinity; // Warning 対策
+      editor.focus();
 
       document.body.addEventListener('dragover', e => {e.preventDefault();} );
       document.body.addEventListener('drop'    , e => {

@@ -1,7 +1,7 @@
-'use strict';
 require("ace-min-noconflict");
 
 ace.define('ace/mode/ksl_highlight_rules', function(require, exports, module) {
+    'use strict';
 
     const oop = require("ace/lib/oop");
     const {TextHighlightRules} = require("ace/mode/text_highlight_rules");
