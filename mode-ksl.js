@@ -42,6 +42,9 @@ ace.define('ace/mode/ksl', function(require, exports, module) {
 
             if (tokens.length && tokens[tokens.length -1].type == "comment") return false;
 
+            if (input == '}') {
+                return true;
+            }
             if (state == "start") {
                 if (line.match(/^.*[\}]\s*$/)) {
                     return true;
