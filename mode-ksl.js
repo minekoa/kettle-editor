@@ -28,9 +28,9 @@ ace.define('ace/mode/ksl', function(require, exports, module) {
             if (state == "start" && line.match(/^.*[\{]\s*$/)) {
                 return indent + tab;
             }
-            if (this.checkOutdent(state, line, '\n')) {
-                return indent - tab;
-            }
+//            if (this.checkOutdent(state, line, '\n')) {
+//                return indent - tab;
+//            }
 
             return indent;
         };
